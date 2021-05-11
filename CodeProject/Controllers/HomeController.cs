@@ -35,7 +35,7 @@ namespace CodeProject.Controllers
             var stat = new WebStat
             {
                 TotalServed = await _analyticStore.CountAsync(from, to),
-                UniqueVisitors = await _analyticStore.CountUniqueIndentitiesAsync(from, to),
+                UniqueVisitors = await _analyticStore.CountUniqueIdentitiesAsync(from, to),
                 DailyAverage = await _analyticStore.DailyAverage(from, to),
                 DailyServed = await _analyticStore.DailyServed(from, to),
                 HourlyServed = await _analyticStore.HourlyServed(from, to),
